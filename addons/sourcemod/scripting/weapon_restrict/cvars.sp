@@ -65,7 +65,7 @@ void CreateConVars()
 		CVAR			= FindConVar("ammo_smokegrenade_max");
 		g_iSmokeAmmo 	= CVAR.IntValue;
 		
-		(CVAR 			= 	CreateConVar("sm_weapon_restrict_max_money", 	"160000", 	"The maximum amount of funds a player has",	_, true, 0.0)).AddChangeHook(ChangeCvar_Money);
+		(CVAR 			= 	CreateConVar("sm_weapon_restrict_max_money", 	"16000", 	"The maximum amount of funds a player has",	_, true, 0.0)).AddChangeHook(ChangeCvar_Money);
 		g_iMaxMoney		= 	CVAR.IntValue;
 	}
 	else

@@ -27,7 +27,7 @@ public Action OnWeaponCanUse(int iClient, int iWeapon)
 
 	if(g_fDelay > 0.0 && !g_bSpamProtectPrint[iClient])
 	{
-		if(iTeam == CS_TEAM_CT)	PrintToChat(iClient, "%s %t %t", ADMINCOMMANDTAG, weaponNames[iID], "IsRestrictedPickupCT", 	Function_GetRestrictValue(iTeam, iID));
+		if(iTeam == CS_TEAM_CT)	PrintToChat(iClient, "%s %t %t", ADMINCOMMANDTAG, weaponNames[iID], "IsRestrictedPickupCT", Function_GetRestrictValue(iTeam, iID));
 		else 					PrintToChat(iClient, "%s %t %t", ADMINCOMMANDTAG, weaponNames[iID], "IsRestrictedPickupT", 	Function_GetRestrictValue(iTeam, iID));
 		g_bSpamProtectPrint[iClient] = true;
 		CreateTimer(g_fDelay, ResetPrintDelay, iClient);

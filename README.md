@@ -1,5 +1,5 @@
 # Weapon Restrict
-Esta é uma versão modificada do bem conhecido *Weapon Restrict*.
+Restrict the use of weapons.
 
 ## Principais mudanças
 - Removidos *todos* nativos por velocidade. Duvido que muitos tenham usado, se é que o fizeram;
