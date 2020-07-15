@@ -73,6 +73,7 @@ public void OnPluginStart()
 	LoadTranslations("WeaponRestrict.phrases");
 	
 	AddCommandListener(OnJoinClass,	"joinclass");
+	
 	HookEvent("round_start", EventRoundStart, EventHookMode_PostNoCopy);
 	
 	CreateConVars();
