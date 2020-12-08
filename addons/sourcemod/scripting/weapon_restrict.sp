@@ -11,7 +11,7 @@
 
 #include <adminmenu>
 
-public const char ADMINCOMMANDTAG[] = " \x01[\x02SM\x01]\x01";
+public const char ADMINCOMMANDTAG[] = " \x01[ \x02SM \x01]";
 
 #include "weapon_restrict/defines.sp"
 #include "weapon_restrict/weapons.sp"
@@ -27,7 +27,7 @@ public Plugin myinfo =
 {
 	name 	= "Weapon Restrict",
 	author 	= "Dr!fter, Someone, crashzk",
-	version = "3.1.9 F-BETA",
+	version = "3.1.10",
 	url 	= "https://github.com/zkservidores-clientes"
 };
 
@@ -47,7 +47,7 @@ public APLRes AskPluginLoad2(Handle myself, bool bLate, char[] error, int err_ma
 	}
 	else
 	{
-		FormatEx(error, err_max, "[Weapon Resctrict] [ERROR] This plugin is only supported on CS:S or CS:GO.");
+		FormatEx(error, err_max, "[Weapon Resctrict] [ERROR] This plugin is only supported on CS:S / CS:GO!");
 		return APLRes_Failure;
 	}
 
@@ -84,8 +84,10 @@ public void OnPluginStart()
 		if(hTopMenu)		OnAdminMenuReady(hTopMenu);
     }
 	RequestFrame(Load);
+
 	
-	RegConsoleCmd("sm_wp", CMD_TEST);
+	RegConsoleCmd("sm_weaponrestrict", CMD_TEST);
+	RegConsoleCmd("sm_wr", CMD_TEST);
 }
 
 public Action CMD_TEST(int iClient, int iArgs)

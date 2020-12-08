@@ -50,6 +50,5 @@ Cvars Counter-Strike: Source:
 - sm_weapon_restrict_max_money - The maximum amount of funds a player has. [16000]
 
 ## Credits
-- [Dr!fter](https://forums.alliedmods.net/showthread.php?p=950174) - Original version of the plugin; (https://forums.alliedmods.net/showthread.php?p=950174)
+- [Dr!fter](https://forums.alliedmods.net/showthread.php?p=950174) - Original version of the plugin; ***(https://forums.alliedmods.net/showthread.php?p=950174)***
 - [Someone](https://github.com/SomethingFromSomewhere) Project Fork [Weapon Restrict](https://github.com/SomethingFromSomewhere/Weapon-Restrict-Forked);
-
