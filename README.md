@@ -35,13 +35,14 @@ Numbers greater than 1 and above mean the maximum number of units selected by a 
 
 To change the immunity flag, set the required flag for the `sm_restrict_immunity_level` command in **admin_overrides.cfg**.
 
+## Cvars
 - `sm_weapon_restrict_print_delay "5.0"` - Interval between prohibition messages.
 - `sm_perplayer_restrict "1"` - Enables / Disables the weapon ban, depending on the number of players on the team.
 - `sm_perplayer_bots "1"` - Account bots.
 - `sm_perplayer_specs "1"` - Count of observers.
 - `sm_weapon_restrict_remove_weapon "0"` - Removal of prohibited weapons when trying to take.
 
-**Cvars Counter-Strike: Source:**
+## Cvars Counter-Strike: Source:**
 - `sm_weapon_restrict_max_money "16000"` - The maximum amount of funds a player has.
 
 ## Credits
