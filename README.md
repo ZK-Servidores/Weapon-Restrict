@@ -30,20 +30,19 @@ The general configuration  weapon_restrict.cfg* is automatically created in the 
 
 Numbers greater than 1 and above mean the maximum number of units selected by a team simultaneously from a given weapon;
 
-- `sm_allow_restricted_pickup` - Enables / disables the ban; [0]
-- `sm_weapon_restrict_immunity` - Enables / disables immunity for administrators; [0]
+- `sm_allow_restricted_pickup "0"` - Enables / disables the ban;
+- `sm_weapon_restrict_immunity "0"` - Enables / disables immunity for administrators;
 
 To change the immunity flag, set the required flag for the `sm_restrict_immunity_level` command in **admin_overrides.cfg**.
 
-- `sm_weapon_restrict_print_delay` - Interval between prohibition messages. 0 - hang up. [5.0]
-- `sm_perplayer_restrict` - Enables / Disables the weapon ban, depending on the number of players on the team. [ 1 ]
-- `sm_perplayer_bots` - Account bots. [ 1 ]
-- `sm_perplayer_specs` - Count of observers. [ 1 ]
-- `sm_weapon_restrict_remove_weapon` - Removal of prohibited weapons when trying to take. [0]
+- `sm_weapon_restrict_print_delay "5.0"` - Interval between prohibition messages.
+- `sm_perplayer_restrict "1"` - Enables / Disables the weapon ban, depending on the number of players on the team.
+- `sm_perplayer_bots "1"` - Account bots.
+- `sm_perplayer_specs "1"` - Count of observers.
+- `sm_weapon_restrict_remove_weapon "0"` - Removal of prohibited weapons when trying to take.
 
-Cvars Counter-Strike: Source:
-
-- sm_weapon_restrict_max_money - The maximum amount of funds a player has. [16000]
+**Cvars Counter-Strike: Source:**
+- `sm_weapon_restrict_max_money "16000"` - The maximum amount of funds a player has.
 
 ## Credits
 - [Dr!fter](https://forums.alliedmods.net/showthread.php?p=950174) - Original version of the plugin; ***(https://forums.alliedmods.net/showthread.php?p=950174)***
