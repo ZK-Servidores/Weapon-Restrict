@@ -42,7 +42,7 @@ To change the immunity flag, set the required flag for the `sm_restrict_immunity
 - `sm_perplayer_specs "1"` - Count of observers;
 - `sm_weapon_restrict_remove_weapon "0"` - Removal of prohibited weapons when trying to take;
 
-### Cvars Counter-Strike: Source:
+### Cvars Counter-Strike: Source
 - `sm_weapon_restrict_max_money "16000"` - The maximum amount of funds a player has;
 
 ## Credits
