@@ -18,7 +18,7 @@ Before the weapon, the ban value for both teams is indicated.
 
 Most cvars in the new version are the same as the old one.
 
-The general configuration  weapon_restrict.cfg* is automatically created in the default configuration folder of sourcemod.
+The general configuration  **weapon_restrict.cfg** is automatically created in the default configuration folder of sourcemod.
 
 - `sm_restrict _*_ct` - Disable the value for CT;
 - `sm_restrict _*_t` - Value for prohibition T;
