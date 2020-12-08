@@ -11,7 +11,7 @@ Restrict the use of weapons.
 - Added native to issue immunity;
 - Changed the name of the file ***include***; **(restrict > weapon_restrict)**.
 - Changed the folder name from ***source code***; **(restrictinc > weapon_restrict)**.
-- Sound removed; You already used?
+- Sound removed;
 
 Before the weapon, the ban value for both teams is indicated.
 ![Menu](http://hlmod.ru/attachments/upload_2017-10-9_22-34-34-png.26198)
@@ -33,7 +33,7 @@ Numbers greater than 1 and above mean the maximum number of units selected by a 
 - `sm_allow_restricted_pickup` - Enables / disables the ban; [0]
 - `sm_weapon_restrict_immunity` - Enables / disables immunity for administrators; [0]
 
-To change the immunity flag, set the required flag for the `sm_restrict_immunity_level` command in ***admin_overrides.cfg***. **[The default flag is `"a"`]**
+To change the immunity flag, set the required flag for the `sm_restrict_immunity_level` command in **admin_overrides.cfg**.
 
 - `sm_weapon_restrict_print_delay` - Interval between prohibition messages. 0 - hang up. [5.0]
 - `sm_perplayer_restrict` - Enables / Disables the weapon ban, depending on the number of players on the team. [ 1 ]
