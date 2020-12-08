@@ -23,7 +23,7 @@ The general configuration  weapon_restrict.cfg* is automatically created in the 
 - `sm_restrict _*_ct` - Disable the value for CT;
 - `sm_restrict _*_t` - Value for prohibition T;
 
-***Where * is the name of the weapon. (ak-47, m4a1)***
+***Where * is the name of the weapon. (AK-47, M4A1, etc)***
 
 - A value of -1 means full access to weapons; **(Pattern)**
 - A value of 0 means that there are no weapons;
