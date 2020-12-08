@@ -1,19 +1,16 @@
 # Weapon Restrict
 Restrict the use of weapons.
 
-## Main Changes
-- Removed *all* natives by speed. I doubt that many have used it, if at all;
+**Main Changes:**
+- Removed ***all*** natives by speed. I doubt that many have used it, if at all;
 - Control completely removed over training and special rounds. This is a plugin to control the amount of weapons and more;
 - Better performance of the whole plugin, it is now less demanding;
 - The routings have been changed, which means that plugins for another version may not be compatible with this one;
-
-## Rest
 - Transition to the new syntax;
-- Cvars are translated into Russian;
 - The menu is slightly changed;
 - Added native to issue immunity;
-- Changed the name of the file *include*; **(restrict > weapon_restrict)**.
-- Changed the folder name from *source code*; **(restrictinc > weapon_restrict)**.
+- Changed the name of the file ***include***; **(restrict > weapon_restrict)**.
+- Changed the folder name from ***source code***; **(restrictinc > weapon_restrict)**.
 - Sound removed; You already used?
 
 Before the weapon, the ban value for both teams is indicated.
@@ -23,21 +20,19 @@ Most cvars in the new version are the same as the old one.
 
 The general configuration  weapon_restrict.cfg* is automatically created in the default configuration folder of sourcemod.
 
-More details: [Weapon Restrict](http://hlmod.ru/resources/weapon-restrict-forked.620)
-
 - `sm_restrict _*_ct` - Disable the value for CT;
 - `sm_restrict _*_t` - Value for prohibition T;
 
 ***Where * is the name of the weapon. (ak-47, m4a1)***
 
-A value of -1 means full access to weapons. (Pattern)
-A value of 0 means that there are no weapons.
-Numbers greater than 1 and above mean the maximum number of units selected by a team simultaneously from a given weapon.
+A value of -1 means full access to weapons; **(Pattern)**
+A value of 0 means that there are no weapons;
+Numbers greater than 1 and above mean the maximum number of units selected by a team simultaneously from a given weapon;
 
 - `sm_allow_restricted_pickup` - Enables / disables the ban; [0]
 - `sm_weapon_restrict_immunity` - Enables / disables immunity for administrators; [0]
 
-To change the immunity flag, set the required flag for the `sm_restrict_immunity_level` command in **admin_overrides.cfg**. *[The default flag is "a"]*
+To change the immunity flag, set the required flag for the `sm_restrict_immunity_level` command in ***admin_overrides.cfg***. **[The default flag is `"a"`]**
 
 - `sm_weapon_restrict_print_delay` - Interval between prohibition messages. 0 - hang up. [5.0]
 - `sm_perplayer_restrict` - Enables / Disables the weapon ban, depending on the number of players on the team. [ 1 ]
