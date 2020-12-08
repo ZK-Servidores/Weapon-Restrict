@@ -26,7 +26,9 @@ The general configuration  weapon_restrict.cfg* is automatically created in the 
 ***Where * is the name of the weapon. (ak-47, m4a1)***
 
 A value of -1 means full access to weapons; **(Pattern)**
+
 A value of 0 means that there are no weapons;
+
 Numbers greater than 1 and above mean the maximum number of units selected by a team simultaneously from a given weapon;
 
 - `sm_allow_restricted_pickup` - Enables / disables the ban; [0]
