@@ -27,8 +27,7 @@ The general configuration  **weapon_restrict.cfg** is automatically created in t
 
 - A value of -1 means full access to weapons; **(Pattern)**
 - A value of 0 means that there are no weapons;
-
-Numbers greater than 1 and above mean the maximum number of units selected by a team simultaneously from a given weapon;
+- A value of +1 mean the maximum number of units selected by a team simultaneously from a given weapon;
 
 - `sm_allow_restricted_pickup "0"` - Enables / disables the ban;
 - `sm_weapon_restrict_immunity "0"` - Enables / disables immunity for administrators;

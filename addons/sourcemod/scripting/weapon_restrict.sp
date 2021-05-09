@@ -27,8 +27,8 @@ public Plugin myinfo =
 {
 	name 	= "Weapon Restrict",
 	author 	= "Dr!fter, Someone, crashzk",
-	version = "3.1.10",
-	url 	= "https://github.com/zkservidores-clientes"
+	version = "3.1.10fix",
+	url 	= "https://github.com/ZK-Servidores/Plugins-SourceMod"
 };
 
 public APLRes AskPluginLoad2(Handle myself, bool bLate, char[] error, int err_max)

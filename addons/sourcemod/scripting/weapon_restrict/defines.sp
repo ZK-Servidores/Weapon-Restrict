@@ -90,7 +90,6 @@ const int 	WEAPON_NONE = 0,
 			
 			MAXWEAPONGROUPS = 7;
 
-
 char weaponNames[WEAPON_ID_MAX][] = 
 { 
 	"none",			"p228",			"glock",		"scout",		
@@ -109,25 +108,23 @@ char weaponNames[WEAPON_ID_MAX][] =
 	"decoy",		"incgrenade",	"defuser"
 };
 
-
 public const int weaponGroups[WEAPON_ID_MAX] = 
 { 
 	WeaponTypeNone,		WeaponTypePistol,		WeaponTypePistol,		WeaponTypeSniper,	
-	WeaponTypeGrenade,	WeaponTypeShotgun,	WeaponTypeOther,		WeaponTypeSMG,
-	WeaponTypeRifle,		WeaponTypeGrenade,	WeaponTypePistol,		WeaponTypePistol,
+	WeaponTypeGrenade,	WeaponTypeShotgun,		WeaponTypeOther,		WeaponTypeSMG,
+	WeaponTypeRifle,	WeaponTypeGrenade,		WeaponTypePistol,		WeaponTypePistol,
 	WeaponTypeSMG,		WeaponTypeSniper,		WeaponTypeRifle,		WeaponTypeRifle,
-	WeaponTypePistol,		WeaponTypeSniper,		WeaponTypeSMG,		WeaponTypeMachineGun,
-	WeaponTypeShotgun,	WeaponTypeRifle,		WeaponTypeSMG,		WeaponTypeSniper,
-	WeaponTypeGrenade,	WeaponTypePistol,     WeaponTypeRifle,		WeaponTypeRifle,
-	WeaponTypeKnife,		WeaponTypeSMG,		WeaponTypeShield,		WeaponTypeArmor,
-	WeaponTypeArmor,		WeaponTypeOther,		WeaponTypeRifle,		WeaponTypeSMG,
-	WeaponTypeShotgun,	WeaponTypeMachineGun,	WeaponTypeShotgun,	WeaponTypePistol,
-	WeaponTypeTaser,		WeaponTypePistol,		WeaponTypeSMG,		WeaponTypeSMG,
+	WeaponTypePistol,	WeaponTypeSniper,		WeaponTypeSMG,			WeaponTypeMachineGun,
+	WeaponTypeShotgun,	WeaponTypeRifle,		WeaponTypeSMG,			WeaponTypeSniper,
+	WeaponTypeGrenade,	WeaponTypePistol,    	WeaponTypeRifle,		WeaponTypeRifle,
+	WeaponTypeKnife,	WeaponTypeSMG,			WeaponTypeShield,		WeaponTypeArmor,
+	WeaponTypeArmor,	WeaponTypeOther,		WeaponTypeRifle,		WeaponTypeSMG,
+	WeaponTypeShotgun,	WeaponTypeMachineGun,	WeaponTypeShotgun,		WeaponTypePistol,
+	WeaponTypeTaser,	WeaponTypePistol,		WeaponTypeSMG,			WeaponTypeSMG,
 	WeaponTypeShotgun,	WeaponTypePistol,		WeaponTypeRifle,		WeaponTypeSniper,
-	WeaponTypeRifle,		WeaponTypeSniper,		WeaponTypeKnife,		WeaponTypeGrenade,
-	WeaponTypeGrenade,	WeaponTypeGrenade,	WeaponTypeOther
+	WeaponTypeRifle,	WeaponTypeSniper,		WeaponTypeKnife,		WeaponTypeGrenade,
+	WeaponTypeGrenade,	WeaponTypeGrenade,		WeaponTypeOther
 };
-
 
 public const int weaponSlots[WEAPON_ID_MAX] = 
 { 
@@ -147,7 +144,6 @@ public const int weaponSlots[WEAPON_ID_MAX] =
 	SlotGrenade,		SlotGrenade,		SlotNone
 };
 
-
 public const int BuyTeams[WEAPON_ID_MAX] = 
 { 
 	UNKNOWNTEAM,			BOTHTEAMS,				BOTHTEAMS,				BOTHTEAMS,	
@@ -165,7 +161,6 @@ public const int BuyTeams[WEAPON_ID_MAX] =
 	TERRORISTTEAM,			BOTHTEAMS,				BOTHTEAMS,				TERRORISTTEAM,
 	BOTHTEAMS,				COUNTERTERRORISTTEAM,	COUNTERTERRORISTTEAM
 };
-
 
 public const int AllowedGame[WEAPON_ID_MAX] = 
 {
@@ -185,9 +180,7 @@ public const int AllowedGame[WEAPON_ID_MAX] =
 	3,				3,				1
 };
 
-
 public const char g_WeaponGroupNames[][WEAPONARRAYSIZE] = {"pistols", "smgs", "shotguns", "rifles", "snipers", "grenades", "armor"};
-
 
 bool g_bSpamProtectPrint[MAXPLAYERS+1],		g_bPerPlayerSpecs, 						g_bPerPlayerBots, 
 
@@ -195,31 +188,29 @@ bool g_bSpamProtectPrint[MAXPLAYERS+1],		g_bPerPlayerSpecs, 						g_bPerPlayerBo
 	
 	bIsFirstKey = true,						g_bLateLoaded, 							g_bImmunity[MAXPLAYERS+1],
 	
-	g_bOverideT[WEAPON_ID_MAX], 				g_bOverideCT[WEAPON_ID_MAX],				g_bWeaponKill,
+	g_bOverideT[WEAPON_ID_MAX], 			g_bOverideCT[WEAPON_ID_MAX],			g_bWeaponKill,
 	
 	g_bStatus = true;
 	
 
-int 	g_iMenuAmount[MAXPLAYERS+1], 			g_iWeaponSlected[MAXPLAYERS+1], 			g_iGroupSelected[MAXPLAYERS+1], 
+int 	g_iMenuAmount[MAXPLAYERS+1], 		g_iWeaponSlected[MAXPLAYERS+1], 		g_iGroupSelected[MAXPLAYERS+1], 
 
 	g_bIsGroup[MAXPLAYERS+1], 				g_bIsUnrestrict[MAXPLAYERS+1],			CvarArrayHandleValCT[WEAPON_ID_MAX], 
 	
-	CvarArrayHandleValT[WEAPON_ID_MAX], 		g_iMaxMoney, 							g_iHeAmmo, 
-	
+	CvarArrayHandleValT[WEAPON_ID_MAX], 	g_iMaxMoney, 							g_iHeAmmo, 
+
 	g_iFlashAmmo, 							g_iSmokeAmmo,							defaultValuesCT[WEAPON_ID_MAX], 
 	
 	defaultValuesT[WEAPON_ID_MAX], 			currentID = WEAPON_NONE, 				iLastVal = -1, 
 	
-	iLastIndex = 0, 							perPlayer[WEAPON_ID_MAX][MAXPLAYERS+1],	g_iMyWeaponsMax = 31, 
+	iLastIndex = 0, 						perPlayer[WEAPON_ID_MAX][MAXPLAYERS+1],	g_iMyWeaponsMax = 31, 
 	
 	HEGRENADE_AMMO = 11, 					FLASH_AMMO = 12, 						SMOKE_AMMO = 13, 
 	
 	INC_AMMO = 16, 							DECOY_AMMO = 17;
 	
-	
-TopMenuObject g_hWR;
+TopMenuObject	g_hWR;
 TopMenu 		g_hAdminMenu;
-
 
 ConVar 	g_hRestrictCVarsT[WEAPON_ID_MAX-4], 		g_hRestrictCVarsCT[WEAPON_ID_MAX-4];
 Handle	hCanBuyForward, 						hCanPickupForward;
@@ -231,10 +222,8 @@ enum GameType
 	GAME_CSGO
 };
 
-
 GameType g_iGame;
 float g_fDelay;
-
 
 ArrayList hWeaponsIDArray, hWeaponEntityArray;
 StringMap g_hWeaponInfoTrie;

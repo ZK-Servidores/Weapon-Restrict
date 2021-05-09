@@ -158,6 +158,7 @@ void Function_RemoveRandom(int count, int iTeam, int iID)
 			}
 		}
 	}
+	
 	SortIntegers(weaponArray, index-1, Sort_Random);
 	
 	if(slot == SlotGrenade)
@@ -186,6 +187,7 @@ void Function_RemoveRandom(int count, int iTeam, int iID)
 				ammoindex = DECOY_AMMO;
 			}
 		}
+		
 		for(i = 0; i < count; ++i)	if(i <= index-1 && IsValidEdict(weaponArray[i]))
 		{
 			iClient = GetEntPropEnt(weaponArray[i], Prop_Data, "m_hOwnerEntity");
@@ -208,6 +210,7 @@ void Function_RemoveRandom(int count, int iTeam, int iID)
 			}
 		}
 	}
+	
 	else if(slot != SlotNone)
 	{
 		for(i = 0; i < count; ++i)	if(i <= index-1 && IsValidEdict(weaponArray[i]))
@@ -216,6 +219,7 @@ void Function_RemoveRandom(int count, int iTeam, int iID)
 			if(iClient != -1 && Function_RemoveWeaponDrop(iClient, weaponArray[i]))	Function_RefundMoney(iClient, iID);
 		}
 	}
+	
 	else
 	{
 		for(i = 0; i < count; ++i)
@@ -465,7 +469,6 @@ int Function_CanBuyWeapon(int iClient, int iTeam, int iID)
 	Call_PushCellRef(bResult);
 	Call_Finish(iAction);
 
-
 	switch(iAction)
 	{
 		case Plugin_Continue:	if(iMaxAmount == -1 || Function_GetImmunity(iClient) || Function_GetTeamWeaponCount(iTeam, iID) < iMaxAmount || g_bAllow)
@@ -484,14 +487,12 @@ bool Function_CanPickupWeapon(int iClient, int iTeam, int iID)
 	bool bResult = true;
 	Action iAction = Plugin_Continue;
 	
-
 	Call_StartForward(hCanPickupForward);
 	Call_PushCell(iClient);
 	Call_PushCell(iTeam);
 	Call_PushCell(iID);
 	Call_PushCellRef(bResult);
 	Call_Finish(iAction);
-
 	
 	switch(iAction)
 	{

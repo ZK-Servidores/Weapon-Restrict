@@ -49,25 +49,25 @@ bool HandleRestrictionCommand(int iClient, char[] weapon, int team = 0, int amou
 		{
 			if(team == 3 || team == 0)
 			{
-				if(group == WeaponTypeNone && Function_SetRestriction(id, CS_TEAM_CT, amount, true))		ShowActivity2(iClient, ADMINCOMMANDTAG, "%t %t %t %t", "RestrictedCmd", weaponNames[id], "ToAmount", amount, "ForCT");
+				if(group == WeaponTypeNone && Function_SetRestriction(id, CS_TEAM_CT, amount, true))	ShowActivity2(iClient, ADMINCOMMANDTAG, "%t %t %t %t", "RestrictedCmd", weaponNames[id], "ToAmount", amount, "ForCT");
 				else if(id == WEAPON_NONE && Function_SetGroupRestriction(group, CS_TEAM_CT, amount))	ShowActivity2(iClient, ADMINCOMMANDTAG, "%t %t %t %t", "RestrictedCmd", g_WeaponGroupNames[group], "ToAmount", amount, "ForCT");
 			}
 			if(team == 2 || team == 0)
 			{
 				if(group == WeaponTypeNone && Function_SetRestriction(id, CS_TEAM_T, amount, true))		ShowActivity2(iClient, ADMINCOMMANDTAG, "%t %t %t %t", "RestrictedCmd", weaponNames[id], "ToAmount", amount, "ForT");
-				else if(id == WEAPON_NONE && Function_SetGroupRestriction(group, CS_TEAM_T, amount))		ShowActivity2(iClient, ADMINCOMMANDTAG, "%t %t %t %t", "RestrictedCmd", g_WeaponGroupNames[group], "ToAmount", amount, "ForT");
+				else if(id == WEAPON_NONE && Function_SetGroupRestriction(group, CS_TEAM_T, amount))	ShowActivity2(iClient, ADMINCOMMANDTAG, "%t %t %t %t", "RestrictedCmd", g_WeaponGroupNames[group], "ToAmount", amount, "ForT");
 			}
 		}
 		else
 		{
 			if(team == 3 || team == 0)
 			{
-				if(group == WeaponTypeNone && Function_SetRestriction(id, CS_TEAM_CT, amount, true))		ShowActivity2(iClient, ADMINCOMMANDTAG, "%t %t %t", "UnrestrictedCmd", weaponNames[id], "ForCT");
+				if(group == WeaponTypeNone && Function_SetRestriction(id, CS_TEAM_CT, amount, true))	ShowActivity2(iClient, ADMINCOMMANDTAG, "%t %t %t", "UnrestrictedCmd", weaponNames[id], "ForCT");
 				else if(id == WEAPON_NONE && Function_SetGroupRestriction(group, CS_TEAM_CT, amount))	ShowActivity2(iClient, ADMINCOMMANDTAG, "%t %t %t", "UnrestrictedCmd", g_WeaponGroupNames[group], "ForCT");
 			}
 			if(team == 2 || team == 0)
 			{
-				if(group == WeaponTypeNone && Function_SetRestriction(id, CS_TEAM_T, amount, true))			ShowActivity2(iClient, ADMINCOMMANDTAG, "%t %t %t", "UnrestrictedCmd", weaponNames[id], "ForT");
+				if(group == WeaponTypeNone && Function_SetRestriction(id, CS_TEAM_T, amount, true))		ShowActivity2(iClient, ADMINCOMMANDTAG, "%t %t %t", "UnrestrictedCmd", weaponNames[id], "ForT");
 				else if(id == WEAPON_NONE && Function_SetGroupRestriction(group, CS_TEAM_T, amount))	ShowActivity2(iClient, ADMINCOMMANDTAG, "%t %t %t", "UnrestrictedCmd", g_WeaponGroupNames[group], "ForT");
 			}
 		}
@@ -91,6 +91,7 @@ public Action RestrictAdminCmd(int iClient, int args)
 		ReplyToCommand(iClient, "%s %t", ADMINCOMMANDTAG, "RestrictReply");
 		return Plugin_Handled;
 	}
+	
 	int amount;
 	if(args >= 2)
 	{
@@ -103,6 +104,7 @@ public Action RestrictAdminCmd(int iClient, int args)
 			return Plugin_Handled;
 		}
 	}
+	
 	int teams;
 	if(args == 3)
 	{
@@ -120,6 +122,7 @@ public Action RestrictAdminCmd(int iClient, int args)
 	HandleRestrictionCommand(iClient, weapon, teams, amount, false);
 	return Plugin_Handled;
 }
+
 public Action UnrestrictAdminCmd(int iClient, int args)
 {
 	if(args < 1)
