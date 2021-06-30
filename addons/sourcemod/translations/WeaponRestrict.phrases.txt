@@ -487,14 +487,14 @@
 	
 	"ForCT"
 	{
-		"en"		"for Counter-Terrorists."
-		"ru"		"для Контр-Террористов."
-		"ua"		"для Контр-Терористів."
+		"en"		"for Counter-Terrorists"
+		"ru"		"для Контр-Террористов"
+		"ua"		"для Контр-Терористів"
 	}
 	
 	"ForT"
 	{
-		"en"		"for Terrorists."
+		"en"		"for Terrorists"
 		"ru"		"для Террористов"
 		"ua"		"для Терористів"
 	}
@@ -546,7 +546,7 @@
 	
 	"RestrictMenuMainTitle"
 	{
-		"en"		"Weapon Restrict"
+		"en"		"Weapon Restrict:"
 		"ru"		"Запрет оружия:"
 		"ua"		"Заборона зброї:"
 	}
@@ -575,8 +575,8 @@
 	"RestrictionTypeMenuTitle"
 	{
 		"en"		"Select Type"
-		"ru"		"Выберите тип:"
-		"ua"		"Оберіть тип:"
+		"ru"		"Выберите тип"
+		"ua"		"Оберіть тип"
 	}
 	
 	"TypeWeaponRestrict"
