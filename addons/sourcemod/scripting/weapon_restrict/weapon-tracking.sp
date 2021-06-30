@@ -55,7 +55,6 @@ int GetWeaponIDFromEnt(int iEnt)
 	
 	int iIndex = hWeaponEntityArray.FindValue(iEnt);
 	if(iIndex != -1)		return hWeaponsIDArray.Get(iIndex);
-
 	
 	char sClassname[WEAPONARRAYSIZE];
 	GetEdictClassname(iEnt, sClassname, sizeof(sClassname));

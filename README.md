@@ -20,8 +20,8 @@ Most cvars in the new version are the same as the old one.
 
 The general configuration **weapon_restrict.cfg** is automatically created in the default configuration folder of sourcemod.
 
-- **`sm_restrict _*_ct`** - Disable the value for CT;
-- **`sm_restrict _*_t`** - Value for prohibition T;
+- **`sm_restrict _*_ct "-1/0/1"`** - Disable weapon for CT;
+- **`sm_restrict _*_t "-1/0/1"`** - Disable weapon for T;
 
 ***Where * is the name of the weapon. (AK-47, M4A1, etc)***
 
@@ -31,7 +31,7 @@ The general configuration **weapon_restrict.cfg** is automatically created in th
 - **`sm_allow_restricted_pickup "0"`** - Enables / disables the ban;
 - **`sm_weapon_restrict_immunity "0"`** - Enables / disables immunity for administrators;
 
-To change the immunity flag, set the required flag for the `sm_restrict_immunity_level` command in **admin_overrides.cfg**.
+To change the immunity flag, set the required flag for the **`sm_restrict_immunity_level`** command in **admin_overrides.cfg**.
 
 ## Cvars
 - **`sm_weapon_restrict_print_delay "5.0"`** - Interval between prohibition messages;

@@ -53,8 +53,8 @@ public APLRes AskPluginLoad2(Handle myself, bool bLate, char[] error, int err_ma
 
 	g_bLateLoaded = bLate;
 	
-	hCanBuyForward 		= 	CreateGlobalForward("Restrict_OnCanBuyWeapon", 		ET_Single,	Param_Cell, Param_Cell,	Param_Cell,	Param_CellByRef	);
-	hCanPickupForward 	=	CreateGlobalForward("Restrict_OnCanPickupWeapon",	ET_Single, 	Param_Cell, Param_Cell,	Param_Cell,	Param_CellByRef	);
+	hCanBuyForward = CreateGlobalForward("Restrict_OnCanBuyWeapon", 		ET_Single,	Param_Cell, Param_Cell,	Param_Cell,	Param_CellByRef	);
+	hCanPickupForward = CreateGlobalForward("Restrict_OnCanPickupWeapon",	ET_Single, 	Param_Cell, Param_Cell,	Param_Cell,	Param_CellByRef	);
 	
 	CreateNative("Restrict_SetImmunity", Native_SetImmunity);
 	CreateNative("Restrict_SetStatus", Native_SetStatus);
@@ -84,7 +84,6 @@ public void OnPluginStart()
 		if(hTopMenu)		OnAdminMenuReady(hTopMenu);
     }
 	RequestFrame(Load);
-
 	
 	RegConsoleCmd("sm_weaponrestrict", CMD_TEST);
 	RegConsoleCmd("sm_wr", CMD_TEST);

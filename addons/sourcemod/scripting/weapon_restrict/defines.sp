@@ -190,8 +190,7 @@ bool g_bSpamProtectPrint[MAXPLAYERS+1],		g_bPerPlayerSpecs, 						g_bPerPlayerBo
 	
 	g_bOverideT[WEAPON_ID_MAX], 			g_bOverideCT[WEAPON_ID_MAX],			g_bWeaponKill,
 	
-	g_bStatus = true;
-	
+	g_bStatus = true;	
 
 int 	g_iMenuAmount[MAXPLAYERS+1], 		g_iWeaponSlected[MAXPLAYERS+1], 		g_iGroupSelected[MAXPLAYERS+1], 
 
@@ -214,7 +213,6 @@ TopMenu 		g_hAdminMenu;
 
 ConVar 	g_hRestrictCVarsT[WEAPON_ID_MAX-4], 		g_hRestrictCVarsCT[WEAPON_ID_MAX-4];
 Handle	hCanBuyForward, 						hCanPickupForward;
-
 
 enum GameType
 {

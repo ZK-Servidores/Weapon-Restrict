@@ -2,26 +2,26 @@ void CreateConVars()
 {
 	ConVar CVAR;
 	
-	(CVAR					= 		CreateConVar("sm_allow_restricted_pickup", 		"0", 	"0 - prohibit the selection of weapons, 1 - allow",		_, true, 0.0, true, 1.0)).AddChangeHook(ChangeCvar_Allow);
-	g_bAllow 				= 		CVAR.BoolValue;
+	(CVAR					= 	CreateConVar("sm_allow_restricted_pickup", 		"0", 	"0 - prohibit the selection of weapons, 1 - allow",		_, true, 0.0, true, 1.0)).AddChangeHook(ChangeCvar_Allow);
+	g_bAllow 				= 	CVAR.BoolValue;
 	
-	(CVAR					= 		CreateConVar("sm_weapon_restrict_immunity", 	"0", 	"Immunity from Administrators",		_, true, 0.0, true, 1.0)).AddChangeHook(ChangeCvar_Immunity);
-	g_bAdminImmunity 		= 		CVAR.BoolValue;
+	(CVAR					= 	CreateConVar("sm_weapon_restrict_immunity", 	"0", 	"Immunity from Administrators",		_, true, 0.0, true, 1.0)).AddChangeHook(ChangeCvar_Immunity);
+	g_bAdminImmunity 		= 	CVAR.BoolValue;
 	
-	(CVAR					= 		CreateConVar("sm_weapon_restrict_print_delay", 	"5.0", 	"The interval between bans, 0 - disable",		_, true, 0.0)).AddChangeHook(ChangeCvar_Delay);
-	g_fDelay 				= 		CVAR.FloatValue;
+	(CVAR					= 	CreateConVar("sm_weapon_restrict_print_delay", 	"5.0", 	"The interval between bans, 0 - disable",		_, true, 0.0)).AddChangeHook(ChangeCvar_Delay);
+	g_fDelay 				= 	CVAR.FloatValue;
 	
-	(CVAR 					= 		CreateConVar("sm_perplayer_restrict", 			"1", 	"Prohibition of weapons depending on the number of players",	_, true, 0.0, true, 1.0)).AddChangeHook(ChangeCvar_PerPlayer);
-	g_bPerPlayerRestrict 	= 		CVAR.BoolValue;
+	(CVAR					= 	CreateConVar("sm_perplayer_restrict", 			"1", 	"Prohibition of weapons depending on the number of players",	_, true, 0.0, true, 1.0)).AddChangeHook(ChangeCvar_PerPlayer);
+	g_bPerPlayerRestrict	= 	CVAR.BoolValue;
 	
-	(CVAR 					= 		CreateConVar("sm_perplayer_bots", 				"1",	"Count bots as players",	_, true, 0.0, true, 1.0)).AddChangeHook(ChangeCvar_PerPlayerBots);
-	g_bPerPlayerBots 		= 		CVAR.BoolValue;
+	(CVAR 					= 	CreateConVar("sm_perplayer_bots", 				"1",	"Count bots as players",	_, true, 0.0, true, 1.0)).AddChangeHook(ChangeCvar_PerPlayerBots);
+	g_bPerPlayerBots 		= 	CVAR.BoolValue;
 
-	(CVAR 					= 		CreateConVar("sm_perplayer_specs", 				"1", 	"Count specs for players",		_, true, 0.0, true, 1.0)).AddChangeHook(ChangeCvar_PerPlayerSpecs);
-	g_bPerPlayerSpecs 		= 		CVAR.BoolValue;
+	(CVAR 					= 	CreateConVar("sm_perplayer_specs", 				"1", 	"Count specs for players",		_, true, 0.0, true, 1.0)).AddChangeHook(ChangeCvar_PerPlayerSpecs);
+	g_bPerPlayerSpecs 		= 	CVAR.BoolValue;
 	
-	(CVAR					=		CreateConVar("sm_weapon_restrict_remove_weapon", "0", 	"Removing prohibited weapons when trying to pick up",		_, true, 0.0, true, 1.0)).AddChangeHook(ChangeCvar_Remove);
-	g_bWeaponKill			=		CVAR.BoolValue;
+	(CVAR					=	CreateConVar("sm_weapon_restrict_remove_weapon", "0", 	"Removing prohibited weapons when trying to pick up",		_, true, 0.0, true, 1.0)).AddChangeHook(ChangeCvar_Remove);
+	g_bWeaponKill			=	CVAR.BoolValue;
 
 	int x, y, i;
 	char cvar[50], desc[128];
@@ -48,8 +48,8 @@ void CreateConVars()
 		{
 			if(i != WEAPON_DEFUSER)	FormatEx(	cvar, sizeof(cvar), "sm_restrict_%s_ct", 														weaponNames[i]);
 			else					FormatEx(	cvar, sizeof(cvar), "sm_restrict_%s", 															weaponNames[i]);
-			FormatEx(							desc, sizeof(desc), "[КT] [O:%s] -1 = Unrestricted | 0 = Restricted | 1+ = Allowed quantity", 	weaponNames[i]);
-			g_hRestrictCVarsCT[y] = 	CreateConVar(cvar, "-1", desc, _, true, -1.0, true, 64.0);
+									FormatEx(	desc, sizeof(desc), "[КT] [O:%s] -1 = Unrestricted | 0 = Restricted | 1+ = Allowed quantity", 	weaponNames[i]);
+			g_hRestrictCVarsCT[y] = CreateConVar(cvar, "-1", desc, _, true, -1.0, true, 64.0);
 			CvarArrayHandleValCT[i] = y;
 			++y;
 		}
@@ -61,10 +61,9 @@ void CreateConVars()
 		CVAR			= FindConVar("ammo_hegrenade_max");
 		g_iHeAmmo		= CVAR.IntValue;
 		CVAR			= FindConVar("ammo_flashbang_max");
-		g_iFlashAmmo 	= CVAR.IntValue;
+		g_iFlashAmmo  	= CVAR.IntValue;
 		CVAR			= FindConVar("ammo_smokegrenade_max");
 		g_iSmokeAmmo 	= CVAR.IntValue;
-		
 		(CVAR 			= CreateConVar("sm_weapon_restrict_max_money", 	"16000", 	"The maximum amount of funds a player has",	_, true, 0.0)).AddChangeHook(ChangeCvar_Money);
 		g_iMaxMoney		= CVAR.IntValue;
 	}

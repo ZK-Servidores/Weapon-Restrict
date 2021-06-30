@@ -1,6 +1,6 @@
 int GetTypeGroup(const char[] sWeapon)
 {
-	for(int i = 0; i < MAXWEAPONGROUPS; ++i)	if(strcmp(sWeapon, g_WeaponGroupNames[i]) == 0)
+	for(int i = 0; i < MAXWEAPONGROUPS; ++i) if(strcmp(sWeapon, g_WeaponGroupNames[i]) == 0)
 	{
 		return i;
 	}
@@ -13,7 +13,7 @@ void CheckConfig()
 	
 	GetCurrentMap(szMap, sizeof(szMap));
 	
-	if (strncmp(szMap, "workshop", 8) == 0) 	 strcopy(szMap, sizeof(szMap), szMap[8 + StrContains(szMap[9], szMap[8] == '/' ? "/" : "\\")]);
+	if (strncmp(szMap, "workshop", 8) == 0) strcopy(szMap, sizeof(szMap), szMap[8 + StrContains(szMap[9], szMap[8] == '/' ? "/" : "\\")]);
 	BuildPath(Path_SM, file, sizeof(file), "configs/restrict/%s.cfg", szMap);
 	
 	if(!RunFile(file))

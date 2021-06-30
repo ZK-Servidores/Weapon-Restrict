@@ -31,7 +31,6 @@ void PerPlayerInit()
 	
 	SMCParser parser = new SMCParser();
 	int line, col;
-
 	
 	parser.OnEnterSection = Perplayer_NewSection;
 	parser.OnKeyValue = Perplayer_KeyValue;

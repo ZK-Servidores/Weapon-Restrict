@@ -185,7 +185,6 @@ void DisplayAmountMenu(int iClient)
 	hMenu.SetTitle("%T", "AmountMenuTitle", iClient);
 	hMenu.ExitBackButton = true;
 
-
 	char num[4];
 	for(int i = 0; i <= MaxClients; ++i)
 	{
