@@ -172,7 +172,7 @@ public int Handle_TeamMenu(Menu hMenu, MenuAction action, int iClient, int iItem
 		{
 			char sTeam[4];
 			hMenu.GetItem(iItem, sTeam, sizeof(sTeam));
-			if(!g_bIsGroup[iClient])		HandleMenuRestriction(iClient, g_iWeaponSlected[iClient], g_iMenuAmount[iClient], StringToInt(sTeam));
+			if(!g_bIsGroup[iClient])	HandleMenuRestriction(iClient, g_iWeaponSlected[iClient], g_iMenuAmount[iClient], StringToInt(sTeam));
 			else						HandleMenuGroupRestriction(iClient, g_iGroupSelected[iClient], g_iMenuAmount[iClient], StringToInt(sTeam));
 		}
 	}

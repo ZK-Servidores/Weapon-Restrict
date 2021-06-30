@@ -48,7 +48,7 @@ void CreateConVars()
 		{
 			if(i != WEAPON_DEFUSER)	FormatEx(	cvar, sizeof(cvar), "sm_restrict_%s_ct", 														weaponNames[i]);
 			else					FormatEx(	cvar, sizeof(cvar), "sm_restrict_%s", 															weaponNames[i]);
-									FormatEx(	desc, sizeof(desc), "[КT] [O:%s] -1 = Unrestricted | 0 = Restricted | 1+ = Allowed quantity", 	weaponNames[i]);
+									FormatEx(	desc, sizeof(desc), "[CT] [O:%s] -1 = Unrestricted | 0 = Restricted | 1+ = Allowed quantity", 	weaponNames[i]);
 			g_hRestrictCVarsCT[y] = CreateConVar(cvar, "-1", desc, _, true, -1.0, true, 64.0);
 			CvarArrayHandleValCT[i] = y;
 			++y;

@@ -124,7 +124,7 @@ void Function_RemoveRandom(int count, int iTeam, int iID)
 	{
 		if(slot == SlotGrenade || iID == WEAPON_TASER || iID == WEAPON_KNIFE || iID == WEAPON_KNIFE_GG)
 		{
-			if(iID == WEAPON_TASER || iID == WEAPON_KNIFE || iID == WEAPON_KNIFE_GG)		gcount = 1;
+			if(iID == WEAPON_TASER || iID == WEAPON_KNIFE || iID == WEAPON_KNIFE_GG)	gcount = 1;
 			else																		gcount = Function_GetGrenadeCount(i, iID);
 			
 			for(x = 0; x <= g_iMyWeaponsMax; x++)
@@ -372,7 +372,7 @@ bool Function_RemoveSpecialItem(int iClient, int iID)
 			SetEntProp(iClient, Prop_Send, "m_bHasDefuser", 0);
 			return true;
 		}
-		case WEAPON_ASSAULTSUIT:	if(GetEntProp(iClient, Prop_Send, "m_ArmorValue") != 0 && GetEntProp(iClient, Prop_Send, "m_bHasHelmet") != 0)
+		case WEAPON_ASSAULTSUIT: if(GetEntProp(iClient, Prop_Send, "m_ArmorValue") != 0 && GetEntProp(iClient, Prop_Send, "m_bHasHelmet") != 0)
 		{
 			SetEntProp(iClient, Prop_Send, "m_ArmorValue", 0);
 			SetEntProp(iClient, Prop_Send, "m_bHasHelmet", 0);
@@ -383,7 +383,7 @@ bool Function_RemoveSpecialItem(int iClient, int iID)
 			SetEntProp(iClient, Prop_Send, "m_ArmorValue", 0);
 			return true;
 		}
-		case WEAPON_NIGHTVISION:	if(GetEntProp(iClient, Prop_Send, "m_bHasNightVision") !=0)
+		case WEAPON_NIGHTVISION: if(GetEntProp(iClient, Prop_Send, "m_bHasNightVision") !=0)
 		{
 			SetEntProp(iClient, Prop_Send, "m_bHasNightVision", 0);
 			return true;
