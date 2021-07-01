@@ -39,7 +39,7 @@ public void AdminMenu_Unrestrict(TopMenu hMenu, TopMenuAction action, TopMenuObj
 {
 	switch(action)
 	{
-		case TopMenuAction_DisplayOption:	FormatEx(sBuffer, maxlength, "%T", "UnrestrictWeaponsOption", iClient);
+		case TopMenuAction_DisplayOption: FormatEx(sBuffer, maxlength, "%T", "UnrestrictWeaponsOption", iClient);
 		case TopMenuAction_SelectOption:
 		{
 			g_bIsUnrestrict[iClient] = true;
@@ -74,7 +74,7 @@ public int Handle_TypeMenu(Menu hMenu, MenuAction action, int iClient, int iItem
 		case MenuAction_End:	delete hMenu;
 		case MenuAction_Cancel:
 		{
-			if(iItem == MenuCancel_ExitBack && g_hAdminMenu)	g_hAdminMenu.DisplayCategory(g_hWR, iClient);
+			if(iItem == MenuCancel_ExitBack && g_hAdminMenu) g_hAdminMenu.DisplayCategory(g_hWR, iClient);
 		}
 		case MenuAction_Select:
 		{
@@ -103,7 +103,7 @@ public int Handle_WeaponMenu(Menu hMenu, MenuAction action, int iClient, int iIt
 {
 	switch(action)
 	{
-		case MenuAction_End:	delete hMenu;
+		case MenuAction_End: delete hMenu;
 		case MenuAction_Cancel:	if(iItem == MenuCancel_ExitBack)
 		{
 			DisplayTypeMenu(iClient);
@@ -128,8 +128,8 @@ public int Handle_WeaponMenu(Menu hMenu, MenuAction action, int iClient, int iIt
 				switch(g_iWeaponSlected[iClient])
 				{
 					case WEAPON_C4:	HandleMenuRestriction(iClient, WEAPON_C4, -1, CS_TEAM_T);
-					case WEAPON_DEFUSER:	HandleMenuRestriction(iClient, WEAPON_DEFUSER, -1, CS_TEAM_CT);
-					default:	DisplayTeamMenu(iClient);
+					case WEAPON_DEFUSER: HandleMenuRestriction(iClient, WEAPON_DEFUSER, -1, CS_TEAM_CT);
+					default: DisplayTeamMenu(iClient);
 				}
 			}
 		}
@@ -165,15 +165,15 @@ public int Handle_TeamMenu(Menu hMenu, MenuAction action, int iClient, int iItem
 		case MenuAction_End:	delete hMenu;
 		case MenuAction_Cancel:	if(iItem == MenuCancel_ExitBack)
 		{
-			if(!g_bIsUnrestrict[iClient])	DisplayAmountMenu(iClient);
-			else							DisplayRestrictMenu(iClient);
+			if(!g_bIsUnrestrict[iClient]) DisplayAmountMenu(iClient);
+			else DisplayRestrictMenu(iClient);
 		}
 		case MenuAction_Select:
 		{
 			char sTeam[4];
 			hMenu.GetItem(iItem, sTeam, sizeof(sTeam));
-			if(!g_bIsGroup[iClient])	HandleMenuRestriction(iClient, g_iWeaponSlected[iClient], g_iMenuAmount[iClient], StringToInt(sTeam));
-			else						HandleMenuGroupRestriction(iClient, g_iGroupSelected[iClient], g_iMenuAmount[iClient], StringToInt(sTeam));
+			if(!g_bIsGroup[iClient]) HandleMenuRestriction(iClient, g_iWeaponSlected[iClient], g_iMenuAmount[iClient], StringToInt(sTeam));
+			else HandleMenuGroupRestriction(iClient, g_iGroupSelected[iClient], g_iMenuAmount[iClient], StringToInt(sTeam));
 		}
 	}
 }
@@ -199,7 +199,7 @@ public int Handle_AmountMenu(Menu hMenu, MenuAction action, int iClient, int iIt
 {
 	switch(action)
 	{
-		case MenuAction_End:	delete hMenu;
+		case MenuAction_End: delete hMenu;
 		case MenuAction_Cancel:	if(iItem == MenuCancel_ExitBack)
 		{
 			DisplayRestrictMenu(iClient);
@@ -212,8 +212,8 @@ public int Handle_AmountMenu(Menu hMenu, MenuAction action, int iClient, int iIt
 			switch(g_iWeaponSlected[iClient])
 			{
 				case WEAPON_C4:	HandleMenuRestriction(iClient, WEAPON_C4, g_iMenuAmount[iClient], CS_TEAM_T);
-				case WEAPON_DEFUSER:	HandleMenuRestriction(iClient, WEAPON_DEFUSER, g_iMenuAmount[iClient], CS_TEAM_CT);
-				default:	DisplayTeamMenu(iClient);
+				case WEAPON_DEFUSER: HandleMenuRestriction(iClient, WEAPON_DEFUSER, g_iMenuAmount[iClient], CS_TEAM_CT);
+				default: DisplayTeamMenu(iClient);
 			}
 		}
 	}

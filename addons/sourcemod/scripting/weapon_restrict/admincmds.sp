@@ -110,7 +110,7 @@ public Action RestrictAdminCmd(int iClient, int args)
 	{
 		char team[8];
 		GetCmdArg(3, team, sizeof(team));
-		if(strcmp(team, "both", false) == 0)		teams = 0;
+		if(strcmp(team, "both", false) == 0)	teams = 0;
 		else if(strcmp(team, "ct", false) == 0)	teams = CS_TEAM_CT;
 		else if(strcmp(team, "t", false) == 0)	teams = CS_TEAM_T;
 		else
@@ -142,7 +142,7 @@ public Action UnrestrictAdminCmd(int iClient, int args)
 	{
 		char team[8];
 		GetCmdArg(2, team, sizeof(team));
-		if(strcmp(team, "both", false) == 0)		teams = 0;
+		if(strcmp(team, "both", false) == 0)	teams = 0;
 		else if(strcmp(team, "ct", false) == 0)	teams = CS_TEAM_CT;
 		else if(strcmp(team, "t", false) == 0)	teams = CS_TEAM_T;
 		else

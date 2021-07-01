@@ -267,16 +267,16 @@ int Function_GetGrenadeCount(int iClient, int iID)
 int Function_GetTeamWeaponCount(int iTeam, int iID)
 {
 	int iWeaponCount, i, slot = weaponSlots[iID];
-	for(i = 1; i <= MaxClients; ++i)	if(IsClientInGame(i) && !Function_GetImmunity(i) && GetClientTeam(i) == iTeam)
+	for(i = 1; i <= MaxClients; ++i) if(IsClientInGame(i) && !Function_GetImmunity(i) && GetClientTeam(i) == iTeam)
 	{
 		switch(slot)
 		{
-			case SlotGrenade:	iWeaponCount += Function_GetGrenadeCount(i, iID);
-			case SlotNone:		if(Function_HasSpecialItem(i, iID))
+			case SlotGrenade: iWeaponCount += Function_GetGrenadeCount(i, iID);
+			case SlotNone: if(Function_HasSpecialItem(i, iID))
 			{
 				iWeaponCount++;
 			}
-			default:	if(Function_GetWeaponIDFromSlot(i, slot) == iID)
+			default: if(Function_GetWeaponIDFromSlot(i, slot) == iID)
 			{
 				iWeaponCount++;
 			}
@@ -290,16 +290,16 @@ int Function_GetRestrictValue(int iTeam, int iID)
 	int iArray;
 	switch(iTeam)
 	{
-		case CS_TEAM_CT:	if(iID != WEAPON_DEFUSER)
+		case CS_TEAM_CT: if(iID != WEAPON_DEFUSER)
 		{
 			iArray = CvarArrayHandleValCT[iID];
 			if(iArray == -1)	return -1;
 			return g_hRestrictCVarsCT[iArray].IntValue;
 		}
-		case CS_TEAM_T:		if(iID != WEAPON_C4)
+		case CS_TEAM_T:	if(iID != WEAPON_C4)
 		{
 			iArray = CvarArrayHandleValT[iID];
-			if(iArray == -1)	return -1;
+			if(iArray == -1) return -1;
 			return g_hRestrictCVarsT[iArray].IntValue;
 		}
 	}
@@ -327,19 +327,19 @@ bool Function_HasSpecialItem(int iClient, int iID)
 {
 	switch(iID)
 	{
-		case WEAPON_DEFUSER: 		if(GetEntProp(iClient, Prop_Send, "m_bHasDefuser") != 0)
+		case WEAPON_DEFUSER: if(GetEntProp(iClient, Prop_Send, "m_bHasDefuser") != 0)
 		{
 			return true;
 		}
-		case WEAPON_ASSAULTSUIT:	if(GetEntProp(iClient, Prop_Send, "m_ArmorValue") != 0 && GetEntProp(iClient, Prop_Send, "m_bHasHelmet") != 0)
+		case WEAPON_ASSAULTSUIT: if(GetEntProp(iClient, Prop_Send, "m_ArmorValue") != 0 && GetEntProp(iClient, Prop_Send, "m_bHasHelmet") != 0)
 		{
 			return true;
 		}
-		case WEAPON_KEVLAR:			if(GetEntProp(iClient, Prop_Send, "m_ArmorValue") != 0 && GetEntProp(iClient, Prop_Send, "m_bHasHelmet") == 0)
+		case WEAPON_KEVLAR: if(GetEntProp(iClient, Prop_Send, "m_ArmorValue") != 0 && GetEntProp(iClient, Prop_Send, "m_bHasHelmet") == 0)
 		{
 			return true;
 		}
-		case WEAPON_NIGHTVISION:	if(GetEntProp(iClient, Prop_Send, "m_bHasNightVision") !=0)
+		case WEAPON_NIGHTVISION: if(GetEntProp(iClient, Prop_Send, "m_bHasNightVision") !=0)
 		{
 			return true;
 		}
@@ -475,8 +475,8 @@ int Function_CanBuyWeapon(int iClient, int iTeam, int iID)
 		{
 			return true;
 		}
-		case Plugin_Changed:	return bResult;
-		default:			return false;
+		case Plugin_Changed: return bResult;
+		default: return false;
 	}
 	return false;
 }
@@ -500,8 +500,8 @@ bool Function_CanPickupWeapon(int iClient, int iTeam, int iID)
 		{
 			return true;
 		}
-		case Plugin_Changed:	return bResult;
-		default:				return false;
+		case Plugin_Changed: return bResult;
+		default: return false;
 	}
 	return false;
 }

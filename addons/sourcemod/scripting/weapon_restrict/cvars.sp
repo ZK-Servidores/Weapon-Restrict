@@ -35,9 +35,9 @@ void CreateConVars()
 		}
 		if(i != WEAPON_DEFUSER)
 		{
-			if(i != WEAPON_C4)		FormatEx(	cvar, sizeof(cvar), "sm_restrict_%s_t", 														weaponNames[i]);
-			else					FormatEx(	cvar, sizeof(cvar), "sm_restrict_%s", 															weaponNames[i]);
-			FormatEx(							desc, sizeof(desc), "[T] [O:%s] -1 = Unrestricted | 0 = Restricted | 1+ = Allowed quantity", 	weaponNames[i]);
+			if(i != WEAPON_C4)		FormatEx(cvar, sizeof(cvar), "sm_restrict_%s_t", 														weaponNames[i]);
+			else					FormatEx(cvar, sizeof(cvar), "sm_restrict_%s", 															weaponNames[i]);
+									FormatEx(desc, sizeof(desc), "[T] [O:%s] -1 = Unrestricted | 0 = Restricted | 1+ = Allowed quantity", 	weaponNames[i]);
 			g_hRestrictCVarsT[x] = CreateConVar(cvar, "-1", desc, _, true, -1.0, true, 64.0);
 			CvarArrayHandleValT[i] = x;
 			++x;
@@ -46,9 +46,9 @@ void CreateConVars()
 		
 		if(i != WEAPON_C4)
 		{
-			if(i != WEAPON_DEFUSER)	FormatEx(	cvar, sizeof(cvar), "sm_restrict_%s_ct", 														weaponNames[i]);
-			else					FormatEx(	cvar, sizeof(cvar), "sm_restrict_%s", 															weaponNames[i]);
-									FormatEx(	desc, sizeof(desc), "[CT] [O:%s] -1 = Unrestricted | 0 = Restricted | 1+ = Allowed quantity", 	weaponNames[i]);
+			if(i != WEAPON_DEFUSER)	FormatEx(cvar, sizeof(cvar), "sm_restrict_%s_ct", 														weaponNames[i]);
+			else					FormatEx(cvar, sizeof(cvar), "sm_restrict_%s", 															weaponNames[i]);
+									FormatEx(desc, sizeof(desc), "[CT] [O:%s] -1 = Unrestricted | 0 = Restricted | 1+ = Allowed quantity", 	weaponNames[i]);
 			g_hRestrictCVarsCT[y] = CreateConVar(cvar, "-1", desc, _, true, -1.0, true, 64.0);
 			CvarArrayHandleValCT[i] = y;
 			++y;
