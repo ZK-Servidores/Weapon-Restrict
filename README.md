@@ -2,7 +2,7 @@
 Restrict the use of weapons.
 
 **Main Changes:**
-- Removed **all** natives by speed. I doubt that many have used it, if at all;
+- Removed all natives by speed. I doubt that many have used it, if at all;
 - Control completely removed over training and special rounds. This is a plugin to control the amount of weapons and more;
 - Better performance of the whole plugin, it is now less demanding;
 - The routings have been changed, which means that plugins for another version may not be compatible with this one;
