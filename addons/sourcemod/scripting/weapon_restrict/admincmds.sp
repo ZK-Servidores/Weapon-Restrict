@@ -134,7 +134,7 @@ public Action UnrestrictAdminCmd(int iClient, int args)
 	GetCmdArg(1, weapon, sizeof(weapon));
 	if(args == 1)
 	{
-		if(!HandleRestrictionCommand(iClient, weapon, _, _, true) && !HandleRestrictionCommand(iClient, weapon))	ReplyToCommand(iClient, "%s %t", ADMINCOMMANDTAG, "UnrestrictReply");
+		if(!HandleRestrictionCommand(iClient, weapon, _, _, true) && !HandleRestrictionCommand(iClient, weapon)) ReplyToCommand(iClient, "%s %t", ADMINCOMMANDTAG, "UnrestrictReply");
 		return Plugin_Handled;
 	}
 	int teams;

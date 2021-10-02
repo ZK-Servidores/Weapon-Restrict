@@ -25,7 +25,7 @@ void PerPlayerInit()
 	BuildPath(Path_SM, file, sizeof(file), "configs/restrict/perplayerrestrict.txt");
 	if(!FileExists(file))
 	{
-		LogError("[Weapon Restrict] [ERROR] Failed to locate perplayer.txt");
+		LogError("[Weapon Restrict] ERROR - Failed to locate perplayer.txt");
 		return;
 	}
 	
@@ -42,9 +42,9 @@ void PerPlayerInit()
 		char buffer[64];
 		if (parser.GetErrorString(error, buffer, sizeof(buffer)))
 		{
-			LogError("[Weapon Restrict] [ERROR] Perplayer parser error on line %i col %i. Error: %s.", line, col, buffer);
+			LogError("[Weapon Restrict] ERROR - Perplayer parser error on line %i col %i. Error: %s.", line, col, buffer);
 		} 
-		else	LogError("[Weapon Restrict] [ERROR] Fatal perplayer parse error.");
+		else	LogError("[Weapon Restrict] ERROR - Fatal perplayer parse error.");
 		return;
 	}
 	
@@ -64,7 +64,7 @@ public SMCResult Perplayer_NewSection(SMCParser smc, const char[] name, bool opt
 	}
 	else
 	{
-		LogError("[Weapon Restrict] [ERROR] Invalid section name found in perplayer.txt");
+		LogError("[Weapon Restrict] ERROR - Invalid section name found in perplayer.txt");
 		return SMCParse_HaltFail;
 	}
 	return SMCParse_Continue;
@@ -119,16 +119,16 @@ void CheckPerPlayer()
 		int count = GetPlayerCount();
 		for(i = 1; i < WEAPON_ID_MAX; ++i)	if(i != WEAPON_SHIELD)
 		{	
-			if(i != WEAPON_DEFUSER && perPlayer[i][0] != -2 && Function_GetRestrictValue(CS_TEAM_T, i) != perPlayer[i][count] && !Function_IsWeaponInOverride(CS_TEAM_T, i))	Function_SetRestriction(i, CS_TEAM_T, perPlayer[i][count], false);
-			if(i != WEAPON_C4 && perPlayer[i][0] != -2 && Function_GetRestrictValue(CS_TEAM_CT, i) != perPlayer[i][count] && !Function_IsWeaponInOverride(CS_TEAM_CT, i))	Function_SetRestriction(i, CS_TEAM_CT, perPlayer[i][count], false);
+			if(i != WEAPON_DEFUSER && perPlayer[i][0] != -2 && Function_GetRestrictValue(CS_TEAM_T, i) != perPlayer[i][count] && !Function_IsWeaponInOverride(CS_TEAM_T, i)) Function_SetRestriction(i, CS_TEAM_T, perPlayer[i][count], false);
+			if(i != WEAPON_C4 && perPlayer[i][0] != -2 && Function_GetRestrictValue(CS_TEAM_CT, i) != perPlayer[i][count] && !Function_IsWeaponInOverride(CS_TEAM_CT, i)) Function_SetRestriction(i, CS_TEAM_CT, perPlayer[i][count], false);
 		}
 	}
 	else
 	{
 		for(i = 1; i < WEAPON_ID_MAX; ++i)	if(i != WEAPON_SHIELD)
 		{
-			if(i != WEAPON_DEFUSER 	&& 	Function_GetRestrictValue(CS_TEAM_T, 	i) 	!= defaultValuesT[i] 	&& 	!Function_IsWeaponInOverride(CS_TEAM_T, i))	Function_SetRestriction(i, CS_TEAM_T, 	defaultValuesT[i], 	false);
-			if(i != WEAPON_C4 		&& 	Function_GetRestrictValue(CS_TEAM_CT, 	i) 	!= defaultValuesCT[i] 	&& 	!Function_IsWeaponInOverride(CS_TEAM_CT, i))	Function_SetRestriction(i, CS_TEAM_CT, 	defaultValuesCT[i], 	false);
+			if(i != WEAPON_DEFUSER && Function_GetRestrictValue(CS_TEAM_T, i) != defaultValuesT[i] && !Function_IsWeaponInOverride(CS_TEAM_T, i)) Function_SetRestriction(i, CS_TEAM_T, defaultValuesT[i], false);
+			if(i != WEAPON_C4 && Function_GetRestrictValue(CS_TEAM_CT, i) != defaultValuesCT[i]	&& !Function_IsWeaponInOverride(CS_TEAM_CT, i))	Function_SetRestriction(i, CS_TEAM_CT, defaultValuesCT[i], false);
 		}
 	}
 }

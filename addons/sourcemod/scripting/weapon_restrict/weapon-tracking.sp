@@ -7,7 +7,7 @@ void CheckWeaponArrays()
 	else	hWeaponEntityArray = new ArrayList();
 	
 	char sName[WEAPONARRAYSIZE];
-	for (int i = MaxClients; i <= GetMaxEntities(); ++i)	if (IsValidEdict(i) && IsValidEntity(i))
+	for (int i = MaxClients; i <= GetMaxEntities(); ++i) if (IsValidEdict(i) && IsValidEntity(i))
 	{
 		GetEdictClassname(i, sName, sizeof(sName));
 		if((strncmp(sName, "weapon_", 7, false) == 0 || strncmp(sName, "item_", 5, false) == 0))

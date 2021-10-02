@@ -47,7 +47,7 @@ public APLRes AskPluginLoad2(Handle myself, bool bLate, char[] error, int err_ma
 	}
 	else
 	{
-		FormatEx(error, err_max, "[Weapon Resctrict] [ERROR] This plugin is only supported on CS:S/CS:GO!");
+		FormatEx(error, err_max, "[Weapon Resctrict] ERROR - This plugin is only supported on CS:S/CS:GO!");
 		return APLRes_Failure;
 	}
 
