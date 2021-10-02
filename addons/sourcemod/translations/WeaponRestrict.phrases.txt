@@ -438,7 +438,7 @@
 	{
 		"#format"	"{1:i}"
 		"en"		"You have been refunded ${1} for"
-		"pt"		"Você recebeu ${1} do reembolso por"
+		"pt"		"Você recebeu ${1} de reembolso por"
 		"ru"		"Вам возмещено ${1} за"
 		"ua"		"Вам повернено ${1} за"
 	}
@@ -466,7 +466,7 @@
 	
 	"InvalidWeapon"
 	{
-		"en"		"Weapon/group is invalid!"
+		"en"		"Weapon/Group is invalid!"
 		"ru"		"Неверная группа или оружие!"
 		"ua"		"Не правильна група або зброя!"
 	}
@@ -553,7 +553,7 @@
 	
 	"RestrictMenuMainOption"
 	{
-		"en"		"Weapon restrict"
+		"en"		"Weapon Restrict"
 		"ru"		"Запрет оружия"
 		"ua"		"Заборона зброї"
 	}

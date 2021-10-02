@@ -1,15 +1,9 @@
 "PerPlayer"
 {
-	//"awp"
-	//{
-	//	"default"		"0"		// AWP will be disabled by default
-	//	"10"			"1"		// 10 to 17 AWP players will be limited to 1
-	//	"18"			"2"		// 18 to 64 AWP players will be limited to 2
-	//}
-	
-	//"scar20"
-	//{
-	//	"default"		"-1"	// SCAR-20 will be enabled by default
-	//	"5"				"0"		// 1 to 4 people - SCAR-20 will be available to everyone, without limitation. With the advent of 5 players - a ban
-	//}	
+	"awp"
+	{
+		"default"		"0"		// AWP will be disabled by default
+		"5"				"3"		// 5 to 8 AWP players will be limited to 3
+		"9"				"6"		// 9 to 64 AWP players will be limited to 6
+	}
 }

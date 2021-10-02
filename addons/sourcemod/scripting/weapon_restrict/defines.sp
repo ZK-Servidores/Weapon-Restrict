@@ -192,7 +192,7 @@ bool g_bSpamProtectPrint[MAXPLAYERS+1],		g_bPerPlayerSpecs, 						g_bPerPlayerBo
 	
 	g_bStatus = true;	
 
-int 	g_iMenuAmount[MAXPLAYERS+1], 		g_iWeaponSlected[MAXPLAYERS+1], 		g_iGroupSelected[MAXPLAYERS+1], 
+int g_iMenuAmount[MAXPLAYERS+1], 			g_iWeaponSlected[MAXPLAYERS+1], 		g_iGroupSelected[MAXPLAYERS+1], 
 
 	g_bIsGroup[MAXPLAYERS+1], 				g_bIsUnrestrict[MAXPLAYERS+1],			CvarArrayHandleValCT[WEAPON_ID_MAX], 
 	

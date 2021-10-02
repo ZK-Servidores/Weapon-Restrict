@@ -49,6 +49,7 @@ bool GetWeaponInfo(const char[] weapon, int info[InfoMax])
 		CheckWeapon[i] = CharToLower(weapon[i]);
 	}
 	*/
+	
 	ReplaceString(CheckWeapon, sizeof(CheckWeapon), "weapon_", "", false);
 	ReplaceString(CheckWeapon, sizeof(CheckWeapon), "item_", "", false);
 	
