@@ -14,6 +14,7 @@ Restrict the use of weapons.
 - Sound removed;
 
 Before the weapon, the ban value for both teams is indicated.
+
 ![Menu](http://hlmod.ru/attachments/upload_2017-10-9_22-34-34-png.26198)
 
 Most cvars in the new version are the same as the old one.
