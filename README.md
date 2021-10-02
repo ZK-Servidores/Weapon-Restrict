@@ -36,8 +36,8 @@ To change the immunity flag, set the required flag for the **`sm_restrict_immuni
 ## Cvars
 - **`sm_weapon_restrict_print_delay "5.0"`** - Interval between prohibition messages;
 - **`sm_perplayer_restrict "1"`** - Enables / Disables the weapon ban, depending on the number of players on the team;
-- **`sm_perplayer_bots "1"`** - Account bots;
-- **`sm_perplayer_specs "1"`** - Count of observers;
+- **`sm_perplayer_bots "1"`** - Count bots for players;
+- **`sm_perplayer_specs "1"`** - Count specs for players;
 - **`sm_weapon_restrict_remove_weapon "0"`** - Removal of prohibited weapons when trying to take;
 
 ## Cvars Counter-Strike: Source
