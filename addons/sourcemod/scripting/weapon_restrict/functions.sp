@@ -105,7 +105,7 @@ void Function_RefundMoney(int iClient, int iID)
 	
 	iAccount += iAmount;
 	if(iAccount < g_iMaxMoney)	SetEntProp(iClient, Prop_Send, "m_iAccount", iAccount);
-	else						SetEntProp(iClient, Prop_Send, "m_iAccount", g_iMaxMoney);
+	else				SetEntProp(iClient, Prop_Send, "m_iAccount", g_iMaxMoney);
 
 	PrintToChat(iClient, "%s %t %t", ADMINCOMMANDTAG, "Refunded", iAmount,  weaponNames[iID]);
 }
