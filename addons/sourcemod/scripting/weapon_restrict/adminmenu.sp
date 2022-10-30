@@ -7,7 +7,7 @@ public void OnAdminMenuReady(Handle aTopMenu)
 	g_hWR = g_hAdminMenu.AddCategory("restrict", Handle_Category, "sm_restrict", ADMFLAG_CONVARS, "Restrict");
 	
 	if (g_hWR != INVALID_TOPMENUOBJECT)
-    {
+   	{
 		g_hAdminMenu.AddItem("sm_restrict", AdminMenu_Restrict, g_hWR, "sm_restrict", ADMFLAG_CONVARS);
 		g_hAdminMenu.AddItem("sm_unrestrict", AdminMenu_Unrestrict, g_hWR, "sm_unrestrict", ADMFLAG_CONVARS);
 	}
@@ -17,8 +17,8 @@ public void Handle_Category(TopMenu hMenu, TopMenuAction action, TopMenuObject o
 {
 	switch(action)
 	{
-		case TopMenuAction_DisplayTitle:	FormatEx(sBuffer, maxlength, "%T", "RestrictMenuMainTitle", iClient);
-		case TopMenuAction_DisplayOption:	FormatEx(sBuffer, maxlength, "%T", "RestrictMenuMainOption", iClient);
+		case TopMenuAction_DisplayTitle: FormatEx(sBuffer, maxlength, "%T", "RestrictMenuMainTitle", iClient);
+		case TopMenuAction_DisplayOption: FormatEx(sBuffer, maxlength, "%T", "RestrictMenuMainOption", iClient);
 	}
 }
 
@@ -94,7 +94,7 @@ void DisplayRestrictMenu(int iClient)
 	hMenu.ExitBackButton = true;
 
 	if(g_bIsGroup[iClient])	AddGroupsToMenu(hMenu);
-	else					AddWeaponsToMenu(hMenu);
+	else	AddWeaponsToMenu(hMenu);
 	
 	hMenu.Display(iClient, MENU_TIME_FOREVER);
 }
@@ -162,7 +162,7 @@ public int Handle_TeamMenu(Menu hMenu, MenuAction action, int iClient, int iItem
 {
 	switch(action)
 	{
-		case MenuAction_End:	delete hMenu;
+		case MenuAction_End: delete hMenu;
 		case MenuAction_Cancel:	if(iItem == MenuCancel_ExitBack)
 		{
 			if(!g_bIsUnrestrict[iClient]) DisplayAmountMenu(iClient);
