@@ -53,7 +53,7 @@ public APLRes AskPluginLoad2(Handle myself, bool bLate, char[] error, int err_ma
 
 	g_bLateLoaded = bLate;
 	
-	hCanBuyForward = CreateGlobalForward("Restrict_OnCanBuyWeapon", 		ET_Single,	Param_Cell, Param_Cell,	Param_Cell,	Param_CellByRef	);
+	hCanBuyForward = CreateGlobalForward("Restrict_OnCanBuyWeapon", 	ET_Single,	Param_Cell, Param_Cell,	Param_Cell,	Param_CellByRef	);
 	hCanPickupForward = CreateGlobalForward("Restrict_OnCanPickupWeapon",	ET_Single, 	Param_Cell, Param_Cell,	Param_Cell,	Param_CellByRef	);
 	
 	CreateNative("Restrict_SetImmunity", Native_SetImmunity);
