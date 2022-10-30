@@ -28,7 +28,7 @@ public Action OnWeaponCanUse(int iClient, int iWeapon)
 	if(g_fDelay > 0.0 && !g_bSpamProtectPrint[iClient])
 	{
 		if(iTeam == CS_TEAM_CT)	PrintToChat(iClient, "%s %t %t", ADMINCOMMANDTAG, weaponNames[iID], "IsRestrictedPickupCT", Function_GetRestrictValue(iTeam, iID));
-		else 					PrintToChat(iClient, "%s %t %t", ADMINCOMMANDTAG, weaponNames[iID], "IsRestrictedPickupT", 	Function_GetRestrictValue(iTeam, iID));
+		else		PrintToChat(iClient, "%s %t %t", ADMINCOMMANDTAG, weaponNames[iID], "IsRestrictedPickupT", 	Function_GetRestrictValue(iTeam, iID));
 		g_bSpamProtectPrint[iClient] = true;
 		CreateTimer(g_fDelay, ResetPrintDelay, iClient);
 	}
@@ -87,7 +87,7 @@ public Action CS_OnBuyCommand(int iClient, const char[] weapon)
 	if(!Function_CanBuyWeapon(iClient, iTeam, iID))
 	{
 		if(iTeam == CS_TEAM_CT)	PrintToChat(iClient, "%s %t %t", ADMINCOMMANDTAG, weaponNames[iID], "IsRestrictedBuyCT", Function_GetRestrictValue(iTeam, iID));
-		else					PrintToChat(iClient, "%s %t %t", ADMINCOMMANDTAG, weaponNames[iID], "IsRestrictedBuyT", Function_GetRestrictValue(iTeam, iID));
+		else		PrintToChat(iClient, "%s %t %t", ADMINCOMMANDTAG, weaponNames[iID], "IsRestrictedBuyT", Function_GetRestrictValue(iTeam, iID));
 		return Plugin_Handled;
 	}
 	return Plugin_Continue;
