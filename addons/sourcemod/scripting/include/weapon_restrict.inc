@@ -3,7 +3,7 @@
 #endif
 #define _weapon_restrict_included
 
-#define WEAPONARRAYSIZE 64
+#define WEAPONARRAYSIZE 65
 
 /**
  * Установка иммунитета от запрета оружия.
