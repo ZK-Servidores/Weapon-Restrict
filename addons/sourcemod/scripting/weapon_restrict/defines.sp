@@ -53,7 +53,7 @@ const int 	WEAPON_NONE = 0,
 			WEAPON_DECOY = 52,
 			WEAPON_INCGRENADE = 53,
 			WEAPON_DEFUSER = 54,
-			WEAPON_ID_MAX = 55,
+			WEAPON_ID_MAX = 65,
 
 			WeaponTypePistol = 0,
 			WeaponTypeSMG = 1,
@@ -90,7 +90,7 @@ const int 	WEAPON_NONE = 0,
 			
 			MAXWEAPONGROUPS = 7;
 
-char weaponNames[WEAPON_ID_MAX][] = 
+char weaponNames[] [WEAPON_ID_MAX] = 
 { 
 	"none",			"p228",			"glock",		"scout",		
 	"hegrenade",	"xm1014",		"c4",			"mac10",		
@@ -211,7 +211,7 @@ int g_iMenuAmount[MAXPLAYERS+1], 			g_iWeaponSlected[MAXPLAYERS+1], 		g_iGroupSe
 TopMenuObject	g_hWR;
 TopMenu 		g_hAdminMenu;
 
-ConVar 	g_hRestrictCVarsT[WEAPON_ID_MAX-4], 		g_hRestrictCVarsCT[WEAPON_ID_MAX-4];
+ConVar 	g_hRestrictCVarsT[WEAPON_ID_MAX-4], 	g_hRestrictCVarsCT[WEAPON_ID_MAX-4];
 Handle	hCanBuyForward, 						hCanPickupForward;
 
 enum GameType

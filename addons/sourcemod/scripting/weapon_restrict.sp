@@ -27,7 +27,7 @@ public Plugin myinfo =
 {
 	name 	= "Weapon Restrict",
 	author 	= "Dr!fter, Someone, crashzk",
-	version = "3.2",
+	version = "3.2.1",
 	url 	= "https://github.com/ZK-Servidores/Plugins-SourceMod"
 };
 
@@ -42,7 +42,7 @@ public APLRes AskPluginLoad2(Handle myself, bool bLate, char[] error, int err_ma
 		HEGRENADE_AMMO = 13;
 		FLASH_AMMO = 14;
 		SMOKE_AMMO = 15;
-		g_iMyWeaponsMax = 63;
+		g_iMyWeaponsMax = 65;
 		g_iGame = GAME_CSGO;
 	}
 	else
