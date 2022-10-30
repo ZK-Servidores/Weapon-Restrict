@@ -1,4 +1,5 @@
-const int 	WEAPON_NONE = 0,
+const int
+			WEAPON_NONE = 0,
 			WEAPON_P228 = 1,
 			WEAPON_GLOCK = 2,
 			WEAPON_SCOUT = 3,
@@ -93,19 +94,19 @@ const int 	WEAPON_NONE = 0,
 char weaponNames[] [WEAPON_ID_MAX] = 
 { 
 	"none",			"p228",			"glock",		"scout",		
-	"hegrenade",	"xm1014",		"c4",			"mac10",		
-	"aug",			"smokegrenade",	"elite",		"fiveseven",
+	"hegrenade",		"xm1014",		"c4",			"mac10",		
+	"aug",			"smokegrenade",		"elite",		"fiveseven",
 	"ump45",		"sg550",		"galil",		"famas",
 	"usp",			"awp",			"mp5navy",		"m249",
 	"m3",			"m4a1",			"tmp",			"g3sg1",
-	"flashbang",	"deagle",		"sg552",		"ak47",
+	"flashbang",		"deagle",		"sg552",		"ak47",
 	"knife",		"p90",			"shield",		"kevlar",			
-	"assaultsuit",	"nvgs",			"galilar",		"bizon",
+	"assaultsuit",		"nvgs",			"galilar",		"bizon",
 	"mag7",			"negev",		"sawedoff",		"tec9",
 	"taser",		"hkp2000",		"mp7",			"mp9",
 	"nova",			"p250",			"scar17",		"scar20",
 	"sg556",		"ssg08",		"knifegg",		"molotov",
-	"decoy",		"incgrenade",	"defuser"
+	"decoy",		"incgrenade",		"defuser"
 };
 
 public const int weaponGroups[WEAPON_ID_MAX] = 
@@ -116,10 +117,10 @@ public const int weaponGroups[WEAPON_ID_MAX] =
 	WeaponTypeSMG,		WeaponTypeSniper,		WeaponTypeRifle,		WeaponTypeRifle,
 	WeaponTypePistol,	WeaponTypeSniper,		WeaponTypeSMG,			WeaponTypeMachineGun,
 	WeaponTypeShotgun,	WeaponTypeRifle,		WeaponTypeSMG,			WeaponTypeSniper,
-	WeaponTypeGrenade,	WeaponTypePistol,    	WeaponTypeRifle,		WeaponTypeRifle,
+	WeaponTypeGrenade,	WeaponTypePistol,    		WeaponTypeRifle,		WeaponTypeRifle,
 	WeaponTypeKnife,	WeaponTypeSMG,			WeaponTypeShield,		WeaponTypeArmor,
 	WeaponTypeArmor,	WeaponTypeOther,		WeaponTypeRifle,		WeaponTypeSMG,
-	WeaponTypeShotgun,	WeaponTypeMachineGun,	WeaponTypeShotgun,		WeaponTypePistol,
+	WeaponTypeShotgun,	WeaponTypeMachineGun,		WeaponTypeShotgun,		WeaponTypePistol,
 	WeaponTypeTaser,	WeaponTypePistol,		WeaponTypeSMG,			WeaponTypeSMG,
 	WeaponTypeShotgun,	WeaponTypePistol,		WeaponTypeRifle,		WeaponTypeSniper,
 	WeaponTypeRifle,	WeaponTypeSniper,		WeaponTypeKnife,		WeaponTypeGrenade,
@@ -128,91 +129,91 @@ public const int weaponGroups[WEAPON_ID_MAX] =
 
 public const int weaponSlots[WEAPON_ID_MAX] = 
 { 
-	SlotUnknown,		SlotPistol,			SlotPistol,			SlotPrimmary,	
-	SlotGrenade,		SlotPrimmary,		SlotC4,				SlotPrimmary,
-	SlotPrimmary,		SlotGrenade,		SlotPistol,			SlotPistol,
+	SlotUnknown,		SlotPistol,		SlotPistol,		SlotPrimmary,	
+	SlotGrenade,		SlotPrimmary,		SlotC4,			SlotPrimmary,
+	SlotPrimmary,		SlotGrenade,		SlotPistol,		SlotPistol,
 	SlotPrimmary,		SlotPrimmary,		SlotPrimmary,		SlotPrimmary,
-	SlotPistol,			SlotPrimmary,		SlotPrimmary,		SlotPrimmary,
+	SlotPistol,		SlotPrimmary,		SlotPrimmary,		SlotPrimmary,
 	SlotPrimmary,		SlotPrimmary,		SlotPrimmary,		SlotPrimmary,
-	SlotGrenade,		SlotPistol,			SlotPrimmary,		SlotPrimmary,
-	SlotKnife,			SlotPrimmary, 		SlotUnknown,		SlotNone,
-	SlotNone,			SlotNone,			SlotPrimmary,		SlotPrimmary,
+	SlotGrenade,		SlotPistol,		SlotPrimmary,		SlotPrimmary,
+	SlotKnife,		SlotPrimmary, 		SlotUnknown,		SlotNone,
+	SlotNone,		SlotNone,		SlotPrimmary,		SlotPrimmary,
 	SlotPrimmary,		SlotPrimmary,		SlotPrimmary,		SlotPistol,
-	SlotKnife,			SlotPistol,			SlotPrimmary,		SlotPrimmary,
-	SlotPrimmary,		SlotPistol,			SlotPrimmary,		SlotPrimmary,
-	SlotPrimmary,		SlotPrimmary,		SlotKnife,			SlotGrenade,
+	SlotKnife,		SlotPistol,		SlotPrimmary,		SlotPrimmary,
+	SlotPrimmary,		SlotPistol,		SlotPrimmary,		SlotPrimmary,
+	SlotPrimmary,		SlotPrimmary,		SlotKnife,		SlotGrenade,
 	SlotGrenade,		SlotGrenade,		SlotNone
 };
 
 public const int BuyTeams[WEAPON_ID_MAX] = 
 { 
-	UNKNOWNTEAM,			BOTHTEAMS,				BOTHTEAMS,				BOTHTEAMS,	
-	BOTHTEAMS,				BOTHTEAMS,				TERRORISTTEAM,			TERRORISTTEAM,
-	COUNTERTERRORISTTEAM,	BOTHTEAMS,				TERRORISTTEAM,			COUNTERTERRORISTTEAM,
-	BOTHTEAMS,				COUNTERTERRORISTTEAM,	TERRORISTTEAM,			COUNTERTERRORISTTEAM,
-	BOTHTEAMS,				BOTHTEAMS,				BOTHTEAMS,				BOTHTEAMS,
-	BOTHTEAMS,				COUNTERTERRORISTTEAM,	COUNTERTERRORISTTEAM,	TERRORISTTEAM,
-	BOTHTEAMS,				BOTHTEAMS,				TERRORISTTEAM,			TERRORISTTEAM,
-	BOTHTEAMS,				BOTHTEAMS,				UNKNOWNTEAM,			BOTHTEAMS,
-	BOTHTEAMS,				BOTHTEAMS,				TERRORISTTEAM,			BOTHTEAMS,
-	COUNTERTERRORISTTEAM,	BOTHTEAMS,				TERRORISTTEAM,			TERRORISTTEAM,
-	BOTHTEAMS,				BOTHTEAMS,				BOTHTEAMS,				COUNTERTERRORISTTEAM,
-	BOTHTEAMS,				BOTHTEAMS,				UNKNOWNTEAM,			COUNTERTERRORISTTEAM,
-	TERRORISTTEAM,			BOTHTEAMS,				BOTHTEAMS,				TERRORISTTEAM,
-	BOTHTEAMS,				COUNTERTERRORISTTEAM,	COUNTERTERRORISTTEAM
+	UNKNOWNTEAM,			BOTHTEAMS,			BOTHTEAMS,			BOTHTEAMS,	
+	BOTHTEAMS,			BOTHTEAMS,			TERRORISTTEAM,			TERRORISTTEAM,
+	COUNTERTERRORISTTEAM,		BOTHTEAMS,			TERRORISTTEAM,			COUNTERTERRORISTTEAM,
+	BOTHTEAMS,			COUNTERTERRORISTTEAM,		TERRORISTTEAM,			COUNTERTERRORISTTEAM,
+	BOTHTEAMS,			BOTHTEAMS,			BOTHTEAMS,			BOTHTEAMS,
+	BOTHTEAMS,			COUNTERTERRORISTTEAM,		COUNTERTERRORISTTEAM,		TERRORISTTEAM,
+	BOTHTEAMS,			BOTHTEAMS,			TERRORISTTEAM,			TERRORISTTEAM,
+	BOTHTEAMS,			BOTHTEAMS,			UNKNOWNTEAM,			BOTHTEAMS,
+	BOTHTEAMS,			BOTHTEAMS,			TERRORISTTEAM,			BOTHTEAMS,
+	COUNTERTERRORISTTEAM,		BOTHTEAMS,			TERRORISTTEAM,			TERRORISTTEAM,
+	BOTHTEAMS,			BOTHTEAMS,			BOTHTEAMS,			COUNTERTERRORISTTEAM,
+	BOTHTEAMS,			BOTHTEAMS,			UNKNOWNTEAM,			COUNTERTERRORISTTEAM,
+	TERRORISTTEAM,			BOTHTEAMS,			BOTHTEAMS,			TERRORISTTEAM,
+	BOTHTEAMS,			COUNTERTERRORISTTEAM,		COUNTERTERRORISTTEAM
 };
 
 public const int AllowedGame[WEAPON_ID_MAX] = 
 {
-	-1,				2,				1,				2,
-	1,				1,				1,				1,		
-	1,				1,				1,				1,
-	1,				2,				2,				1,
-	2,				1,				2,				1,
-	2,				1,				2,				1,
-	1,				1,				2,				1,
-	1,				1,				-1,				1,			
-	1,				1,				3,				3,
-	3,				3,				3,				3,
-	3,				3,				3,				3,
-	3,				3,				-1,				3,
-	3,				3,				3,				3,
-	3,				3,				1
+	-1,		2,		1,		2,
+	1,		1,		1,		1,		
+	1,		1,		1,		1,
+	1,		2,		2,		1,
+	2,		1,		2,		1,
+	2,		1,		2,		1,
+	1,		1,		2,		1,
+	1,		1,		-1,		1,			
+	1,		1,		3,		3,
+	3,		3,		3,		3,
+	3,		3,		3,		3,
+	3,		3,		-1,		3,
+	3,		3,		3,		3,
+	3,		3,		1
 };
 
 public const char g_WeaponGroupNames[][WEAPONARRAYSIZE] = {"pistols", "smgs", "shotguns", "rifles", "snipers", "grenades", "armor"};
 
-bool g_bSpamProtectPrint[MAXPLAYERS+1],		g_bPerPlayerSpecs, 						g_bPerPlayerBots, 
+bool g_bSpamProtectPrint[MAXPLAYERS+1],		g_bPerPlayerSpecs, 				g_bPerPlayerBots, 
 
-	g_bPerPlayerRestrict, 					g_bAdminImmunity, 						g_bAllow,
+	g_bPerPlayerRestrict, 			g_bAdminImmunity, 				g_bAllow,
 	
-	bIsFirstKey = true,						g_bLateLoaded, 							g_bImmunity[MAXPLAYERS+1],
+	bIsFirstKey = true,			g_bLateLoaded, 					g_bImmunity[MAXPLAYERS+1],
 	
-	g_bOverideT[WEAPON_ID_MAX], 			g_bOverideCT[WEAPON_ID_MAX],			g_bWeaponKill,
+	g_bOverideT[WEAPON_ID_MAX], 		g_bOverideCT[WEAPON_ID_MAX],			g_bWeaponKill,
 	
 	g_bStatus = true;	
 
-int g_iMenuAmount[MAXPLAYERS+1], 			g_iWeaponSlected[MAXPLAYERS+1], 		g_iGroupSelected[MAXPLAYERS+1], 
+int g_iMenuAmount[MAXPLAYERS+1], 		g_iWeaponSlected[MAXPLAYERS+1], 		g_iGroupSelected[MAXPLAYERS+1], 
 
-	g_bIsGroup[MAXPLAYERS+1], 				g_bIsUnrestrict[MAXPLAYERS+1],			CvarArrayHandleValCT[WEAPON_ID_MAX], 
+	g_bIsGroup[MAXPLAYERS+1], 		g_bIsUnrestrict[MAXPLAYERS+1],			CvarArrayHandleValCT[WEAPON_ID_MAX], 
 	
-	CvarArrayHandleValT[WEAPON_ID_MAX], 	g_iMaxMoney, 							g_iHeAmmo, 
+	CvarArrayHandleValT[WEAPON_ID_MAX], 	g_iMaxMoney, 					g_iHeAmmo, 
 
-	g_iFlashAmmo, 							g_iSmokeAmmo,							defaultValuesCT[WEAPON_ID_MAX], 
+	g_iFlashAmmo, 				g_iSmokeAmmo,					defaultValuesCT[WEAPON_ID_MAX], 
 	
-	defaultValuesT[WEAPON_ID_MAX], 			currentID = WEAPON_NONE, 				iLastVal = -1, 
+	defaultValuesT[WEAPON_ID_MAX], 		currentID = WEAPON_NONE, 			iLastVal = -1, 
 	
-	iLastIndex = 0, 						perPlayer[WEAPON_ID_MAX][MAXPLAYERS+1],	g_iMyWeaponsMax = 31, 
+	iLastIndex = 0, 			perPlayer[WEAPON_ID_MAX][MAXPLAYERS+1],		g_iMyWeaponsMax = 31, 
 	
-	HEGRENADE_AMMO = 11, 					FLASH_AMMO = 12, 						SMOKE_AMMO = 13, 
+	HEGRENADE_AMMO = 11, 			FLASH_AMMO = 12, 				SMOKE_AMMO = 13, 
 	
-	INC_AMMO = 16, 							DECOY_AMMO = 17;
+	INC_AMMO = 16, 				DECOY_AMMO = 17;
 	
 TopMenuObject	g_hWR;
-TopMenu 		g_hAdminMenu;
+TopMenu 	g_hAdminMenu;
 
 ConVar 	g_hRestrictCVarsT[WEAPON_ID_MAX-4], 	g_hRestrictCVarsCT[WEAPON_ID_MAX-4];
-Handle	hCanBuyForward, 						hCanPickupForward;
+Handle	hCanBuyForward, 			hCanPickupForward;
 
 enum GameType
 {
